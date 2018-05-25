@@ -1,0 +1,311 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: url('splatter/blood.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#heading-one {
+    font-family: 'Special Elite', cursive;
+    font-size: 150px;
+    color: red;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+#heading-two {
+    font-family: 'Special Elite', cursive;
+    font-size: 150px;
+    color: black;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.sub-header {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: grey;
+    margin-top: -50px;
+    padding-top: 1px;
+    border-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-header {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: grey;
+    margin-top: 30px;
+    padding-top: 1px;
+    border-top: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-image {
+    margin-top: 1px;
+}
+
+.side-nav-bar {
+    margin-left: 25px;
+}
+
+.topnav {
+    font-family: 'Special Elite', cursive;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+.topnav a {
+    color: black;
+    font-family: 'Special Elite', cursive;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.topnav a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.topnav a.active {
+    color: grey;
+}
+
+.delete-btn {
+    font-family: 'Special Elite', cursive;
+    text-decoration: none;
+    color: red;
+    font-size: 15px;
+}
+
+.main-header {
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    color: red;
+}
+
+.main-header a.hover {
+    color: red;
+}
+
+.post-author {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.content {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.nav-left {
+    float: left;
+}
+
+.user-box {
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-logged-in {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+#new-post-btn {
+    margin-right: 15px;
+}
+
+#new-post-btn a.hover {
+    background-color: red;
+}
+
+#logout-btn a.hover {
+    background-color: red;
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container {
+    width: 900px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tags {
+    margin-right: 50px;
+}
+
+.crime-forms {
+    color: black;
+    font-family: 'Special Elite', cursive;
+    font-size: 25px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100px;
+    background-color: grey;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    color: white;
+    padding-top: 25px;
+}
+
+.icons {
+    margin-right: 25px;
+}
+
+.welcome-banner {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: 'Special Elite', cursive;
+    font-size: 60px;
+    color: black;
+}
+
+.welcome-message {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: grey;
+}
+
+.login-message {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: grey;
+}
+
+#signup-link {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: red;
+}
+
+#login-link {
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    color: red;
+}
+
+.user-profile {
+    background-color: black;
+    border-radius: 5px;
+    border-width: 15px 0px 15px 0px;
+    border-image: url(images/tape.png) 100% 0% 100% 0% repeat;
+    color: #f3f3f3;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.user-list {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.crime-dropdown {
+    color: #f3f3f3;
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    background-color: black;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0px 150px 200px 150px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Style the search field */
+
+form.example input[type='text'] {
+    font-family: 'Special Elite', cursive;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+/* Style the submit button */
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: grey;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: red;
+}
+
+/* Clear floats */
+
+form.example::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.example {
+    width: 150px;
+}

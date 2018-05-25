@@ -1,0 +1,47 @@
+
+    <div class="user-profile">
+        Latest posts from our community
+    </div>
+
+
+<div class="display">
+    <div class="side-nav-bar">
+        <nav class="nav flex-sm-column">
+            <a class="topnav" class="nav-link active" href="/home">Posts</a>
+            <a class="topnav" class="nav-link" href="/about">About</a>
+            <a class="topnav" class="nav-link" href="/list">Users</a>
+            <a class="topnav"class="nav-link" href="/profile">My Profile</a>
+            <a class="topnav"class="nav-link" href="/posts/new">New Post</a>
+            <a class="topnav"class="nav-link" href="/logout">Logout</a>
+        <br>
+            <form class="example" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        <br>
+    <a  class="delete-btn"class="nav-link" href="/delete">Delete Account</a>
+        </nav>
+</div>
+
+
+    <div class="container">
+        <% @posts.each do |post| %>
+            <h3 class="main-header">            
+                <img src="images/blood-splatter-vector.png" class="nav-image" width="30" height="30" alt="">
+                    <%= post.title %></h3>
+                        <p class="post-author">By <%= post.user.first_name %> <%= post.user.last_name %></p>
+                            <p class="content"><%= post.content %></p>
+                        <br>
+                            <% end %>
+    </div>
+
+    <div class="crime-form">
+        <a href="/edit"><button type="button" class="btn btn-default btn-sm">
+  Edit</button></a>
+    </div>
+
+    <div class="tags">
+        <h3 class="main-header">Tags</h3>
+    </div>
+   
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+<div class="row">
+    <div class="col-sm-12">
+            <div class="login-form">
+                    <h5 class="card-title">EDIT ACCOUNT</h5>
+                    <form action="/profile/<%= @user_avail.id %>" method="POST">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="text" name="first_name" value="<%= @user_avail.first_name %>">
+                    <input type="text" name="last_name" value="<%= @user_avail.last_name %>">
+                    <input type="text" name="email" value="<%= @user_avail.email %>">
+                    <input type="text" name="birthday" value="<%= @user_avail.birthday %>">
+                    <input type="text" name="password" value="<%= @user_avail.password %>">                    
+                    <button type="submit" class="crime-forms" class="btn btn-primary btn-dark">Submit Changes</button>
+                    </form>
+            </div>
+        </div>
+       
+    
+</div>
+</div>
