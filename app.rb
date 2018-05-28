@@ -56,7 +56,7 @@ post '/login' do
     end 
 end
 
-#logour process
+#logout process
 get '/logout' do
     session.clear
     redirect '/'
@@ -79,9 +79,15 @@ end
 
 #user can delete their account
 delete '/user/:id' do 
-    User.destroy(session[:id])
+    @user = User.find(session[:id])
+    @user.destroy
+    session.clear
     redirect 'users/signup'
 end
+
+    # User.destroy(session[:id])
+    # session.clear
+
 
 
 #create new post
@@ -90,6 +96,7 @@ get '/posts/new' do
 	@post = Post.new
      erb :'posts/new'
 end
+
 
 post '/posts' do
     @user = User.find(session[:id])
