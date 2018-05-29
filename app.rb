@@ -15,10 +15,7 @@ enable :sessions
 
 #welcome page
 get '/' do 
-    # if logged_in?
-    #     redirect to '/users/show'
-    # else
-        erb :index
+    erb :index
 end
 # end
 
@@ -26,6 +23,17 @@ end
 get '/home' do 
     @posts = Post.all
     erb :home
+end
+
+post '/home' do
+    @posts = Post.all
+    erb :home
+end
+
+#show a user's profile and posts
+get '/users/show' do
+    @user = User.find(session[:id])
+    erb :'/users/show'
 end
 
 #signup page to create new user
@@ -50,7 +58,7 @@ post '/login' do
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user != nil
         session[:id] = @user.id
-        redirect '/profile'
+        redirect '/users/show'
     else   
         redirect '/signup'
     end 
@@ -62,15 +70,6 @@ get '/logout' do
     redirect '/'
 end
 
-#show a user's profile and posts
-get '/profile' do
-    @user = User.find(session[:id])
-    erb :'/users/show'
-end
-
-get '/userprofile' do
-
-end
 
 get '/list' do
     @users = User.all
@@ -78,36 +77,47 @@ get '/list' do
 end
 
 #user can delete their account
-delete '/user/:id' do 
+get '/delete' do 
+    erb :deleteprofile, :layout => :layout
+end
+
+delete '/profile/delete' do 
     @user = User.find(session[:id])
     @user.destroy
     session.clear
-    redirect 'users/signup'
+    redirect '/'
 end
 
     # User.destroy(session[:id])
     # session.clear
 
 
-
 #create new post
 get '/posts/new' do
-    @title = "New Post"
-	@post = Post.new
      erb :'posts/new'
 end
 
 
-post '/posts' do
+post '/posts/save' do
     @user = User.find(session[:id])
-    @newpost = Post.create(title: params[:title], content: params[:content])
-    redirect :'/home'
+    @post = Post.create(title: params[:title], content: params[:content], user_id: session[:id])
+    redirect '/myposts'
 	
     end
 
 
 #show a user's posts
-get '/user/posts' do 
+get '/myposts' do
+    @user = User.find(session[:id])
+    p @user
+    @posts = @user.posts     
+    p @posts
+    erb :'/users/show'
+end
+
+post '/myposts' do
+    @user = User.find(session[:id])
+    @posts = @user.posts     
     erb :'/users/show'
 end
 

@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: crime-blog #or whatever your db is called
+  database: crime_blog #or whatever your db is called
 
   production:
   adapter: postgresql

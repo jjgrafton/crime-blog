@@ -10,7 +10,7 @@
             <a class="topnav" class="nav-link active" href="/home">Posts</a>
             <a class="topnav" class="nav-link" href="/about">About</a>
             <a class="topnav" class="nav-link" href="/list">Users</a>
-            <a class="topnav"class="nav-link" href="/profile">My Profile</a>
+            <a class="topnav"class="nav-link" href="/user">My Profile</a>
             <a class="topnav"class="nav-link" href="/posts/new">New Post</a>
             <a class="topnav"class="nav-link" href="/logout">Logout</a>
         <br>
@@ -29,7 +29,7 @@
             <h3 class="main-header">            
                 <img src="images/blood-splatter-vector.png" class="nav-image" width="30" height="30" alt="">
                     <%= post.title %></h3>
-                        <p class="post-author">By <%= post.user.first_name %> <%= post.user.last_name %></p>
+<%#                         <p class="post-author">By <%= post.user.first_name %> 
                             <p class="content"><%= post.content %></p>
                         <br>
                             <% end %>

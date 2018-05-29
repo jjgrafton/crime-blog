@@ -19,15 +19,15 @@
 </nav>
 </div>
 
-<form method="POST" action="/home">
+<form method="POST" action="/posts/save">
   <div class="form-group">
     <label for="exampleFormControlInput1">Title</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="title">
+    <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="title">
   </div>
   
-  <div class="form-group" method="POST" action="/posts">
+  <div class="form-group">
     <label for="exampleFormControlTextarea1">Start writing…</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <input type="text" name="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Tags</label>

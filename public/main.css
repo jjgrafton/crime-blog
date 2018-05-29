@@ -309,3 +309,7 @@ form.example::after {
 .example {
     width: 150px;
 }
+
+.delete-bar {
+    height: 300px;
+}
